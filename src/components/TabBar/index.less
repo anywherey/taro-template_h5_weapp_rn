@@ -1,0 +1,47 @@
+.tabbbar{
+  width: 100%;
+  position: fixed;
+  bottom:0;
+  left:0;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: white;
+  border-top:1px solid black;
+  // border-bottom:1px solid black;
+  &-wrap{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding:0;
+    height:calc(100px + env(safe-area-inset-bottom) / 2);
+    padding-bottom: calc(env(safe-area-inset-bottom) / 2);
+    // height: var(--nutui-tabbar-height,50px);
+    justify-content: center;
+    width: 100%;
+    &__img{
+      width: 50px;
+      height: 50px;
+    }
+    &__item{
+      // color: var(--nutui-tabbar-inactive-color,var(--nutui-gray-1,#1a1a1a));
+      font-size: 22px;
+      position: relative;
+      flex: 1;
+      text-align: center;
+      padding: 0;
+      display: block;
+      height: auto;
+      line-height: 1;
+      margin: 0;
+      overflow: initial;
+    }
+    &-safe_area{
+      display: block;
+      padding-bottom: env(safe-area-inset-bottom);
+      width: 100%;
+    }
+  }
+}

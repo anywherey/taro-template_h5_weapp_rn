@@ -1,0 +1,99 @@
+@samCardWidth:50%;
+@samBottom:10px;
+@randNum:(100*(`Math.random()`))+'px';
+@shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+
+.community{
+    &-icon{
+    }
+    &-icon ~span{
+        display:inline-block;
+        white-space:nowrap;
+        font-size: 13px;
+        line-height: 13px;
+    }
+    &-top{
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+        margin-bottom:@samBottom;
+        background-color: white;
+        >View{
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        &__badge{
+            margin-right:10px;
+        }
+    }
+&-search{
+    margin:0 40px @samBottom 40px;
+    display: flex;
+background-color: white;
+&__search{
+white-space: nowrap;
+}
+&__button{
+    margin-left:20px;
+    font-size: 13px;
+    .rv-button__text{
+        white-space:nowrap;
+    }
+}
+}
+    &-selector{
+        display: flex;
+        justify-content: space-between;
+        .rv-selector__item{
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(207, 201, 194, 0.8);
+            width: 22%;
+            margin:0 1% @samBottom 1%;
+        }
+
+    }
+    &-discuss{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        .outdiscusscard{
+            flex-basis: calc(@samCardWidth - 10px);
+        }
+        >.outdiscusscard:nth-of-type(odd){
+            min-height: calc(200px);
+             align-self: flex-start;
+        }
+        >.outdiscusscard:nth-of-type(even){
+            min-height: calc(180px);
+            align-self: flex-start;
+        }
+    }
+}
+.rv-badge--fixed{
+    transform: translate(50%, 0);
+}
+
+.floating-box {
+    &-bubble {
+        width: 40px;
+        height: 40px;
+      .main-button {
+        font-size: 28px;
+        width:88%;
+        height:88%;
+        color: #fff;
+        background-color: #3f45ff;
+        border-radius: 100%;
+        svg {
+          transition: all 0.2s ease-in-out;
+        }
+
+        &:hover {
+          svg {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+}
